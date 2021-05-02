@@ -1,4 +1,4 @@
-# the_mart
+# The Mart
 
 A new Flutter project.
 
