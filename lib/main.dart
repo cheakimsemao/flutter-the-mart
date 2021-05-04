@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/routes.dart';
-import 'package:the_mart/screens/splash/splash_screen.dart';
+import 'package:the_mart/screens/onboarding/onboarding_screen.dart';
 import 'package:the_mart/constants.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: SplashScreen(),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: OnboardingScreen.routeName,
       routes: routes,
     );
   }

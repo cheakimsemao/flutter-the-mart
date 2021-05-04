@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/size_config.dart';
 
-class SplashContent extends StatelessWidget {
-  const SplashContent({
+class OnboardingContent extends StatelessWidget {
+  const OnboardingContent({
     Key key,
     this.text,
     this.image,

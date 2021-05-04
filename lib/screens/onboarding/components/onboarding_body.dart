@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/default_button.dart';
-import 'package:the_mart/screens/splash/components/splash_content.dart';
+import 'package:the_mart/screens/onboarding/components/onboarding_content.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/size_config.dart';
 
 class Body extends StatefulWidget {
-  // Body({Key key}) : super(key: key);
-
   @override
   _BodyState createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
-  List<Map<String, String>> splashData = [
+  List<Map<String, String>> onboardingData = [
     {
       'text': 'Welcome to The Mart, let\'s shop!\n',
-      'image': 'assets/images/splash-1.png',
+      'image': 'assets/images/onboarding-1.png',
     },
     {
       'text': 'You can find all items that you \nwant here',
-      'image': 'assets/images/splash-2.png',
+      'image': 'assets/images/onboarding-2.png',
     },
     {
       'text': 'You can purchase your items \nwith only serveral clicks',
-      'image': 'assets/images/splash-3.png',
+      'image': 'assets/images/onboarding-3.png',
     },
     {
       'text': 'We will deliver your items within \n24 hours',
-      'image': 'assets/images/splash-4.png',
+      'image': 'assets/images/onboarding-4.png',
     }
   ];
 
@@ -62,10 +60,10 @@ class _BodyState extends State<Body> {
                     currentPage = value;
                   });
                 },
-                itemCount: splashData.length,
-                itemBuilder: (context, index) => SplashContent(
-                  text: splashData[index]['text'],
-                  image: splashData[index]['image'],
+                itemCount: onboardingData.length,
+                itemBuilder: (context, index) => OnboardingContent(
+                  text: onboardingData[index]['text'],
+                  image: onboardingData[index]['image'],
                 ),
               )
             ),
@@ -80,15 +78,15 @@ class _BodyState extends State<Body> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
-                        splashData.length,
+                        onboardingData.length,
                         (index) => buildDot(index: index)
                       )
                     ),
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: currentPage == splashData.length - 1 ? 'Continue' : 'Next',
+                      text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
                       press: () {
-                        if (currentPage == splashData.length - 1) {}
+                        if (currentPage == onboardingData.length - 1) {}
                         _controller.nextPage(
                           duration: Duration(milliseconds: 500),
                           curve: Curves.ease,
