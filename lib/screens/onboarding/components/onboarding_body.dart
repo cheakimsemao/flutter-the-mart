@@ -20,7 +20,7 @@ class _BodyState extends State<Body> {
       'image': 'assets/images/onboarding-2.png',
     },
     {
-      'text': 'You can purchase your items \nwith only serveral clicks',
+      'text': 'You can purchase your items \nwith only several clicks',
       'image': 'assets/images/onboarding-3.png',
     },
     {
