@@ -15,7 +15,7 @@ class DefaultButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: getProportionateScreenWidth(275),
+      width: getProportionateScreenWidth(310),
       height: getProportionateScreenHeight(56),
       // ignore: deprecated_member_use
       child: FlatButton(

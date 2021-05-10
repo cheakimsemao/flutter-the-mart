@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/screens/onboarding/components/onboarding_content.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/sign_in/sign_in_screen.dart';
 import 'package:the_mart/size_config.dart';
 
-class Body extends StatefulWidget {
+class OnboardingBody extends StatefulWidget {
+  OnboardingBody({Key key}) : super(key: key);
+
   @override
-  _BodyState createState() => _BodyState();
+  _OnboardingBodyState createState() => _OnboardingBodyState();
 }
 
-class _BodyState extends State<Body> {
+class _OnboardingBodyState extends State<OnboardingBody> {
   List<Map<String, String>> onboardingData = [
     {
       'text': 'Welcome to The Mart, let\'s shop!\n',
@@ -47,58 +50,69 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 3,
-              child: PageView.builder(
-                controller: _controller,
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                },
-                itemCount: onboardingData.length,
-                itemBuilder: (context, index) => OnboardingContent(
-                  text: onboardingData[index]['text'],
-                  image: onboardingData[index]['image'],
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(
+          getProportionateScreenWidth(20),
+          0,
+          getProportionateScreenWidth(20),
+          0
+        ),
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                flex: 3,
+                child: PageView.builder(
+                  controller: _controller,
+                  onPageChanged: (value) {
+                    setState(() {
+                      currentPage = value;
+                    });
+                  },
+                  itemCount: onboardingData.length,
+                  itemBuilder: (context, index) => OnboardingContent(
+                    text: onboardingData[index]['text'],
+                    image: onboardingData[index]['image'],
+                  ),
+                )
+              ),
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: getProportionateScreenWidth(20),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          onboardingData.length,
+                          (index) => buildDot(index: index)
+                        )
+                      ),
+                      Spacer(flex: 3),
+                      DefaultButton(
+                        text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
+                        press: () {
+                          if (currentPage == onboardingData.length - 1) {
+                            Navigator.pushNamed(context, SignInScreen.routeName);
+                          } else {
+                          _controller.nextPage(
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.ease,
+                          );
+                          }
+                        },
+                      ),
+                      Spacer(),
+                    ],
+                  ),
                 ),
               )
-            ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(20),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        onboardingData.length,
-                        (index) => buildDot(index: index)
-                      )
-                    ),
-                    Spacer(flex: 3),
-                    DefaultButton(
-                      text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
-                      press: () {
-                        if (currentPage == onboardingData.length - 1) {}
-                        _controller.nextPage(
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.ease,
-                        );
-                      },
-                    ),
-                    Spacer(),
-                  ],
-                ),
-              ),
-            )
-          ],
+            ],
+          ),
         ),
       )
     );
