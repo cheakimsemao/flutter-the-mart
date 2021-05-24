@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_mart/components/no_account_text.dart';
 import 'package:the_mart/components/social_card.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/screens/sign_in/components/sign_in_form.dart';
@@ -37,41 +38,24 @@ class SignInBody extends StatelessWidget {
               SignInForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    SocialCard(
-                      icon: "assets/icons/google.svg",
-                      press: () {},
-                    ),
-                    SocialCard(
-                      icon: "assets/icons/facebook.svg",
-                      press: () {},
-                    ),
-                    SocialCard(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
-                    ),
-                  ],
-                ),
-                SizedBox(height: getProportionateScreenHeight(20)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Don\'t have an account? ',
-                      style: TextStyle(
-                        fontSize: getProportionateScreenWidth(14)
-                      ),
-                    ),
-                    Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        fontSize: getProportionateScreenWidth(14),
-                        color: primaryColor,
-                      ),
-                    )
-                  ],
-                )
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SocialCard(
+                    icon: "assets/icons/google.svg",
+                    press: () {},
+                  ),
+                  SocialCard(
+                    icon: "assets/icons/facebook.svg",
+                    press: () {},
+                  ),
+                  SocialCard(
+                    icon: "assets/icons/twitter.svg",
+                    press: () {},
+                  ),
+                ],
+              ),
+              SizedBox(height: getProportionateScreenHeight(20)),
+              NoAccountText()
               ],
             ),
           ),

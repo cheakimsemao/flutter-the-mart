@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
-import 'package:the_mart/components/form_error.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/forgot_password/forgot_password_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class SignInForm extends StatefulWidget {
@@ -13,14 +13,12 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
-  final _formKey = GlobalKey<FormState>();
-  final List<String> errors = [];
   bool isRemember = false;
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      // key: _formKey,
       child: Container(
         margin: EdgeInsets.all(getProportionateScreenWidth(15)),
         child: Column(
@@ -29,7 +27,7 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(height: getProportionateScreenHeight(25)),
             buildPasswordFormField(),
             SizedBox(height: getProportionateScreenHeight(20)),
-            Row(              
+            Row(
               children: <Widget>[
                 Checkbox(
                   value: isRemember,
@@ -42,18 +40,19 @@ class _SignInFormState extends State<SignInForm> {
                 ),
                 Text('Remember me'),
                 Spacer(),
-                Text('Forgot Password'),
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(
+                    context, ForgotPasswordScreen.routeName
+                  ),
+                  child: Text('Forgot Password')
+                ),
               ]
             ),
-            FormError(errors: errors),
+            // FormError(errors: errors),
             SizedBox(height: getProportionateScreenHeight(20)),
             DefaultButton(
               text: 'Sign In',
-              press: () {
-                if (_formKey.currentState.validate()) {
-                  _formKey.currentState.save();
-                }
-              },
+              press: () {},
             )
           ],
         ),
@@ -64,22 +63,6 @@ class _SignInFormState extends State<SignInForm> {
   TextFormField buildPasswordFormField() {
     return TextFormField(
       obscureText: true,
-      onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(passwordNullError)) {
-          setState(() {
-            errors.remove(passwordNullError);
-          });
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value.isEmpty && !errors.contains(passwordNullError)) {
-          setState(() {
-            errors.add(passwordNullError);
-          });
-        }
-        return null;
-      },
       cursorColor: primaryColor,
       decoration: InputDecoration(
         labelText: 'Password',
@@ -103,30 +86,6 @@ class _SignInFormState extends State<SignInForm> {
   TextFormField buildEmailFormField() {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
-      onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(emailNullError)) {
-          setState(() {
-            errors.remove(emailNullError);
-          });
-        } else if (emailValidatorRegExp.hasMatch(value) && errors.contains(invalidEmailError)) {
-          setState(() {
-            errors.remove(invalidEmailError);
-          });
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value.isEmpty && !errors.contains(emailNullError)) {
-          setState(() {
-            errors.add(emailNullError);
-          });
-        } else if (!emailValidatorRegExp.hasMatch(value) && !errors.contains(invalidEmailError)) {
-          setState(() {
-            errors.add(invalidEmailError);
-          });
-        }
-        return null;
-      },
       cursorColor: primaryColor,
       decoration: InputDecoration(
         labelText: 'Email',
