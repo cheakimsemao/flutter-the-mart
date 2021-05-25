@@ -13,12 +13,9 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  bool isRemember = false;
-
   @override
   Widget build(BuildContext context) {
     return Form(
-      // key: _formKey,
       child: Container(
         margin: EdgeInsets.all(getProportionateScreenWidth(15)),
         child: Column(
