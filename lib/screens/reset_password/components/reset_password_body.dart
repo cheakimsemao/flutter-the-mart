@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/no_account_text.dart';
 import 'package:the_mart/constants.dart';
-import 'package:the_mart/screens/forgot_password/components/forgot_password_form.dart';
+import 'package:the_mart/screens/reset_password/components/reset_password_form.dart';
 import 'package:the_mart/size_config.dart';
 
 class ForgotPasswordBody extends StatelessWidget {

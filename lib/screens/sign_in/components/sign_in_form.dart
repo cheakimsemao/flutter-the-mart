@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
-import 'package:the_mart/screens/forgot_password/forgot_password_screen.dart';
+import 'package:the_mart/screens/reset_password/reset_password_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class SignInForm extends StatefulWidget {
