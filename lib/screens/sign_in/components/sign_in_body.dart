@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/no_account_text.dart';
+import 'package:the_mart/components/or_divider.dart';
 import 'package:the_mart/components/social_card.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/screens/sign_in/components/sign_in_form.dart';
@@ -36,7 +37,8 @@ class SignInBody extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.08),
               SignInForm(),
-              SizedBox(height: SizeConfig.screenHeight * 0.08),
+              SizedBox(height: SizeConfig.screenHeight * 0.02),
+              OrDivider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
