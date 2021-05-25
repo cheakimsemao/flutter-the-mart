@@ -21,7 +21,7 @@ class ForgotPasswordBody extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: SizeConfig.screenHeight * 0.04),
               Text(
-                'Forgot Password',
+                'Reset Password',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: primaryColor,
@@ -38,6 +38,7 @@ class ForgotPasswordBody extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               ForgotPasswordForm(),
+              SizedBox(height: 10),
               NoAccountText()
               ],
             ),
