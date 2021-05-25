@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_mart/components/back_appbar.dart';
 import 'package:the_mart/screens/forgot_password/components/forgot_password_body.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: backAppBar(),
       body: ForgotPasswordBody(),
     );
   }
