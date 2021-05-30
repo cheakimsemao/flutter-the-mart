@@ -29,6 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.3
   flutter_svg: ^0.22.0 # For being able to use SVG in the application
   provider: ^5.0.0 # For state management
+  animations: ^2.0.0
 
 dev_dependencies:
   flutter_test:

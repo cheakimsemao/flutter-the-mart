@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/routes.dart';
-import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/screens/onboarding/onboarding_screen.dart';
 import 'package:the_mart/theme.dart';
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Mart',
       theme: theme(),
-      home: HomeScreen(),
+      // home: HomeScreen(),
       initialRoute: OnboardingScreen.routeName,
       routes: routes,
     );
