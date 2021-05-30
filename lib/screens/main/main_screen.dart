@@ -52,7 +52,7 @@ class _MainScreenState extends State<MainScreen> {
             ), 
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.list_outlined,
+                Icons.format_list_bulleted_outlined,
                 size: 28.0,
               ),
               label: 'Categories'
