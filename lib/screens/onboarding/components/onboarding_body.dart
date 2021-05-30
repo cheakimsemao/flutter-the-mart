@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/default_button.dart';
+import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/screens/onboarding/components/onboarding_content.dart';
 import 'package:the_mart/constants.dart';
-import 'package:the_mart/screens/sign_in/sign_in_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class OnboardingBody extends StatefulWidget {
@@ -97,7 +97,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                         text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
                         press: () {
                           if (currentPage == onboardingData.length - 1) {
-                            Navigator.pushNamed(context, SignInScreen.routeName);
+                            Navigator.pushNamed(context, HomeScreen.routeName);
                           } else {
                           _controller.nextPage(
                             duration: Duration(milliseconds: 500),
