@@ -18,7 +18,7 @@ class CompleteProfileBody extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
             children: <Widget>[
-              SizedBox(height: SizeConfig.screenHeight * 0.03),
+              SizedBox(height: SizeConfig.screenHeight * 0.02),
               Text(
                 'Complete Profile',
                 style: TextStyle(
