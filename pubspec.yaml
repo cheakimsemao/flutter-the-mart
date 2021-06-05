@@ -30,6 +30,7 @@ dependencies:
   flutter_svg: ^0.22.0 # For being able to use SVG in the application
   provider: ^5.0.0 # For state management
   animations: ^2.0.0
+  carousel_slider: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/candies/
+    - assets/images/drinks/
+    - assets/images/fruits/
+    - assets/images/noodles/
+    - assets/images/snacks/
     - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
