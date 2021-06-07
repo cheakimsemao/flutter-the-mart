@@ -21,10 +21,12 @@ class ItemCard extends StatelessWidget {
         Container(
           width: getProportionateScreenWidth(160),
           // height: 300,
-          margin: EdgeInsets.fromLTRB(20, 20, 0, 20),
+          margin: EdgeInsets.only(
+            left: getProportionateScreenWidth(18.5)
+          ),
           decoration: BoxDecoration(
             color: Colors.white,
-            border: Border.all(color: secondaryColor.withOpacity(0.2)),
+            border: Border.all(color: secondaryColor.withOpacity(0.25)),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
@@ -34,47 +36,52 @@ class ItemCard extends StatelessWidget {
               )
             ]
           ),
-          child: Column(
-            children: [
-              Container(
-                height: 120,
-                width: 120,
-                margin: EdgeInsets.only(top: 18, bottom: 10),
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    alignment: Alignment.topCenter,
-                    image: AssetImage(itemImage)
-                  )
+          child: InkWell(
+            onTap: () {
+              // Navigator.pushNamed(context, ProductDetailScreen.routeName);
+            },
+            child: Column(
+              children: [
+                Container(
+                  height: getProportionateScreenWidth(100),
+                  width: getProportionateScreenWidth(100),
+                  margin: EdgeInsets.only(
+                    top: getProportionateScreenWidth(18), 
+                    bottom: getProportionateScreenWidth(10)
+                  ),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      alignment: Alignment.topCenter,
+                      image: AssetImage(itemImage)
+                    )
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 0),
-                child: Column(
+                Column(
                   children: [
                     Text(
                       itemName,
                       style: TextStyle(
-                        fontSize: 12
+                        fontSize: getProportionateScreenWidth(12)
                       ),
                     ),
                     Text(
                       itemPrice,
                       style: TextStyle(
                         color: primaryColor,
-                        fontSize: 12,
+                        fontSize: getProportionateScreenWidth(12),
                         fontWeight: FontWeight.bold
                       ),
                     ),
                   ],  
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         Positioned(
-          right: 14,
-          bottom: 34,
+          right: 15,
+          bottom: 15,
           child: InkWell(
             onTap: () {},
             borderRadius: BorderRadius.circular(7),

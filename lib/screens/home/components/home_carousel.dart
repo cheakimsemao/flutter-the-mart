@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/size_config.dart';
 
 class HomeCarousel extends StatefulWidget {
   HomeCarousel({Key key}) : super(key: key);
@@ -61,7 +62,9 @@ class _HomeCarouselState extends State<HomeCarousel> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 7),
+          padding: EdgeInsets.only(
+            top: getProportionateScreenWidth(7)
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: imageList.map((path) {

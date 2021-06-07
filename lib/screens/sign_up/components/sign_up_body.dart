@@ -56,7 +56,7 @@ class SignUpBody extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: getProportionateScreenHeight(20)),
+              SizedBox(height: SizeConfig.screenHeight * 0.025),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -55,7 +55,7 @@ class SignInBody extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: getProportionateScreenHeight(20)),
+              SizedBox(height: SizeConfig.screenHeight * 0.025),
               NoAccountText()
               ],
             ),

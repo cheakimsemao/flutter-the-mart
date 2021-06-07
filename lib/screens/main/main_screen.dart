@@ -1,5 +1,5 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:animations/animations.dart';
 import 'package:the_mart/screens/home/home_screen.dart';
 
 class MainScreen extends StatefulWidget {

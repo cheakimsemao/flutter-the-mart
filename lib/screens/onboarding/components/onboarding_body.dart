@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/default_button.dart';
-import 'package:the_mart/screens/main/main_screen.dart';
 import 'package:the_mart/screens/onboarding/components/onboarding_content.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/sign_in/sign_in_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class OnboardingBody extends StatefulWidget {
@@ -51,11 +51,9 @@ class _OnboardingBodyState extends State<OnboardingBody> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(
-          getProportionateScreenWidth(20),
-          0,
-          getProportionateScreenWidth(20),
-          0
+        padding: EdgeInsets.only(
+          left: getProportionateScreenWidth(20),
+          right: getProportionateScreenWidth(20),
         ),
         child: SizedBox(
           width: double.infinity,
@@ -97,7 +95,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                         text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
                         press: () {
                           if (currentPage == onboardingData.length - 1) {
-                            Navigator.pushNamed(context, MainScreen.routeName);
+                            Navigator.pushNamed(context, SignInScreen.routeName);
                           } else {
                           _controller.nextPage(
                             duration: Duration(milliseconds: 500),

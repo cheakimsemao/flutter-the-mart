@@ -23,7 +23,7 @@ class HomeOfferTitle extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: getProportionateScreenWidth(20),
               fontWeight: FontWeight.bold
             ),
           ),
@@ -33,7 +33,7 @@ class HomeOfferTitle extends StatelessWidget {
             child: Text(
               'See All',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: getProportionateScreenWidth(14),
                 color: primaryColor
               ),
             ),

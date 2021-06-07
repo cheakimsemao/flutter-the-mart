@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/main/main_screen.dart';
 import 'package:the_mart/screens/reset_password/reset_password_screen.dart';
 import 'package:the_mart/size_config.dart';
 
@@ -51,7 +52,11 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(height: getProportionateScreenHeight(20)),
             DefaultButton(
               text: 'Sign In',
-              press: () {},
+              press: () {
+                Navigator.pushNamed(
+                  context, MainScreen.routeName
+                );
+              },
             )
           ],
         ),

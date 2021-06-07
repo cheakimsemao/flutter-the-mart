@@ -38,7 +38,7 @@ class ForgotPasswordBody extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               ForgotPasswordForm(),
-              SizedBox(height: 10),
+              SizedBox(height: getProportionateScreenWidth(10)),
               NoAccountText()
               ],
             ),

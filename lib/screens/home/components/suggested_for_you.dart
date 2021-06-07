@@ -14,6 +14,10 @@ class SuggestedForYou extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: getProportionateScreenWidth(230),
+      padding: EdgeInsets.only(
+        top: getProportionateScreenWidth(20),
+        bottom: getProportionateScreenWidth(20),
+      ),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[

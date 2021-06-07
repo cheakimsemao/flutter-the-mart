@@ -42,7 +42,9 @@ class _CompleteYourProfileFormState extends State<CompleteProfileForm> {
             Row(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(bottom: 18),
+                  padding: EdgeInsets.only(
+                    bottom: getProportionateScreenWidth(16)
+                  ),
                   child: Checkbox(
                     value: isAgree,
                     activeColor: primaryColor,
