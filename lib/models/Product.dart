@@ -78,7 +78,7 @@ List<Product> products = [
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.00,
     isRecommendation: false,
-    isBestSellings: false,
+    isBestSellings: true,
   ),
   // =================================================================
   // Drinks
@@ -91,7 +91,7 @@ List<Product> products = [
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.00,
     isRecommendation: false,
-    isBestSellings: false,
+    isBestSellings: true,
   ),
   Product(
     id: 8,
@@ -151,7 +151,7 @@ List<Product> products = [
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.00,
     isRecommendation: false,
-    isBestSellings: false,
+    isBestSellings: true,
   ),
   Product(
     id: 14,
@@ -280,7 +280,7 @@ List<Product> products = [
     productCategory: 'drinks',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 0.50,
-    isRecommendation: false,
+    isRecommendation: true,
     isBestSellings: false,
   ),
   Product(
@@ -313,7 +313,7 @@ List<Product> products = [
     productCategory: 'fruits',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.00,
-    isRecommendation: false,
+    isRecommendation: true,
     isBestSellings: false,
   ),
   Product(
@@ -366,7 +366,7 @@ List<Product> products = [
     productCategory: 'noodles',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.25,
-    isRecommendation: false,
+    isRecommendation: true,
     isBestSellings: false,
   ),
   Product(
@@ -377,7 +377,7 @@ List<Product> products = [
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.25,
     isRecommendation: false,
-    isBestSellings: false,
+    isBestSellings: true,
   ),
   Product(
     id: 37,
@@ -386,7 +386,7 @@ List<Product> products = [
     productCategory: 'noodles',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 1.25,
-    isRecommendation: false,
+    isRecommendation: true,
     isBestSellings: false,
   ),
   Product(
@@ -509,7 +509,7 @@ List<Product> products = [
     productCategory: 'snacks',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 2.00,
-    isRecommendation: false,
+    isRecommendation: true,
     isBestSellings: false,
   ),
   Product(
@@ -620,7 +620,7 @@ List<Product> products = [
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eget elit tincidunt aliquet at id ipsum. Integer ut nulla sit amet tellus fermentum ullamcorper quis ac augue. Nullam sed sapien fermentum, fermentum lorem sed, egestas mi.',
     productPrice: 2.00,
     isRecommendation: false,
-    isBestSellings: false,
+    isBestSellings: true,
   ),
   Product(
     id: 61,

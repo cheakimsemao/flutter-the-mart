@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:the_mart/components/item_card.dart';
+import 'package:the_mart/components/product_card.dart';
+import 'package:the_mart/models/Product.dart';
 import 'package:the_mart/size_config.dart';
 
 class BestSellings extends StatelessWidget {
@@ -21,31 +22,12 @@ class BestSellings extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          ItemCard(
-            itemImage: 'assets/images/drinks/drinks-1.jpg',
-            itemName: 'Lorem Ipsum',
-            itemPrice: '\$1.00',
-          ),
-          ItemCard(
-            itemImage: 'assets/images/snacks/pringles-1.jpg',
-            itemName: 'Lorem Ipsum',
-            itemPrice: '\$2.00',
-          ),
-          ItemCard(
-            itemImage: 'assets/images/drinks/drinks-7.jpg',
-            itemName: 'Lorem Ipsum',
-            itemPrice: '\$1.00',
-          ),
-          ItemCard(
-            itemImage: 'assets/images/candies/candies-6.jpg',
-            itemName: 'Lorem Ipsum',
-            itemPrice: '\$1.00',
-          ),
-          ItemCard(
-            itemImage: 'assets/images/noodles/noodles-2.jpg',
-            itemName: 'Lorem Ipsum',
-            itemPrice: '\$3.00',
-          ),
+          ...List.generate(products.length, (index) {
+            if (products[index].isBestSellings) {
+              return ProductCard(product: products[index]);
+            }
+            return SizedBox.shrink();
+          }),
           SizedBox(width: getProportionateScreenWidth(20)),
         ],
       ),

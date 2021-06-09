@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/models/Product.dart';
+import 'package:the_mart/screens/product_detail/product_detail_screen.dart';
 import 'package:the_mart/size_config.dart';
 
-class ItemCard extends StatelessWidget {
-  const ItemCard({
+class ProductCard extends StatelessWidget {
+  const ProductCard({
     Key key,
-    this.itemImage,
-    this.itemName,
-    this.itemPrice,
+    this.productImage,
+    this.productName,
+    this.productPrice,
+    this.product,
   }) : super(key: key);
 
-  final String itemImage;
-  final String itemName;
-  final String itemPrice;
+  final String productImage;
+  final String productName;
+  final String productPrice;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +42,7 @@ class ItemCard extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              // Navigator.pushNamed(context, ProductDetailScreen.routeName);
+              Navigator.pushNamed(context, ProductDetailScreen.routeName);
             },
             child: Column(
               children: [
@@ -53,20 +57,20 @@ class ItemCard extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       alignment: Alignment.topCenter,
-                      image: AssetImage(itemImage)
+                      image: AssetImage(product.productImage)
                     )
                   ),
                 ),
                 Column(
                   children: [
                     Text(
-                      itemName,
+                      product.productName,
                       style: TextStyle(
                         fontSize: getProportionateScreenWidth(12)
                       ),
                     ),
                     Text(
-                      itemPrice,
+                      '\$${product.productPrice}',
                       style: TextStyle(
                         color: primaryColor,
                         fontSize: getProportionateScreenWidth(12),
