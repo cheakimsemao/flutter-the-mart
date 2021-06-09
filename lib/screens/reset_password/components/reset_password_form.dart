@@ -20,9 +20,9 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
         child: Column(
           children: [
             buildEmailFormField(),
-            SizedBox(height: getProportionateScreenHeight(75)),
+            SizedBox(height: getProportionateScreenHeight(30)),
             DefaultButton(
-              text: 'Reset Password',
+              text: 'Submit',
               press: () {},
             )
           ],

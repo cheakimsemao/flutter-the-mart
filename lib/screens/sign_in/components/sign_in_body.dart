@@ -19,6 +19,7 @@ class SignInBody extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
             children: <Widget>[
+              SizedBox(height: SizeConfig.screenHeight * 0.02),
               Text(
                 'Sign In',
                 style: TextStyle(

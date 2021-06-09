@@ -19,18 +19,18 @@ class ForgotPasswordBody extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
             children: <Widget>[
-              SizedBox(height: SizeConfig.screenHeight * 0.04),
+              SizedBox(height: SizeConfig.screenHeight * 0.03),
               Text(
                 'Reset Password',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: primaryColor,
-                  fontSize: getProportionateScreenWidth(34),
+                  fontSize: getProportionateScreenWidth(36),
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                'Reset your password here',
+                'Enter your email and we will send you\na link to reset your password',
                 style: TextStyle(
                   fontSize: getProportionateScreenWidth(14),
                 ),
@@ -38,7 +38,7 @@ class ForgotPasswordBody extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               ForgotPasswordForm(),
-              SizedBox(height: getProportionateScreenWidth(10)),
+              SizedBox(height: SizeConfig.screenHeight * 0.005),
               NoAccountText()
               ],
             ),
