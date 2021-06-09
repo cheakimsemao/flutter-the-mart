@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/product_card.dart';
 import 'package:the_mart/models/Product.dart';
+import 'package:the_mart/screens/product_detail/product_detail_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class SuggestedForYou extends StatelessWidget {
@@ -24,7 +25,16 @@ class SuggestedForYou extends StatelessWidget {
         children: <Widget>[
           ...List.generate(products.length, (index) {
             if (products[index].isRecommendation) {
-              return ProductCard(product: products[index]);
+              return ProductCard(
+                product: products[index],
+                press: () => Navigator.pushNamed(
+                  context,
+                  ProductDetailScreen.routeName,
+                  arguments: ProductDetailArguments(
+                    product: products[index]
+                  ),
+                )
+              );
             }
             return SizedBox.shrink();
           }),
