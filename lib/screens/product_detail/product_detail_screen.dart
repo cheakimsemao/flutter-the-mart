@@ -12,15 +12,13 @@ class ProductDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.white,
-        // elevation: 0,
         leading: Padding(
           padding: EdgeInsets.only(
-            left: getProportionateScreenWidth(10)
+            left: getProportionateScreenWidth(12)
           ),
           child: IconButton(
-            icon: Icon(Icons.arrow_back_ios_outlined),
-            iconSize: 30,
+            icon: Icon(Icons.arrow_back_outlined),
+            iconSize: 35,
             color: Color(0xFF757575),
             onPressed: () {
               Navigator.pop(context);
@@ -30,7 +28,7 @@ class ProductDetailScreen extends StatelessWidget {
         actions: <Widget>[
           Padding(
             padding: EdgeInsets.only(
-              right: getProportionateScreenWidth(10)
+              right: getProportionateScreenWidth(12)
             ),
             child: IconButton(
               icon: Icon(Icons.shopping_bag_outlined),

@@ -29,7 +29,7 @@ class ProductCard extends StatelessWidget {
               border: Border.all(
                 color: secondaryColor.withOpacity(0.25)
               ),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.1),
