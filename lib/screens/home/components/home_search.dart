@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/category/category_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class HomeSearch extends StatelessWidget {
@@ -39,7 +40,9 @@ class HomeSearch extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, CategoryScreen.routeName);
+            },
             borderRadius: BorderRadius.circular(10),
             child: Container(
               height: getProportionateScreenWidth(40),
