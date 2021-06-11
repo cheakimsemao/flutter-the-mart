@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
 import 'package:the_mart/screens/home/home_screen.dart';
+import 'package:the_mart/screens/notification/notification_screen.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key key}) : super(key: key);
@@ -17,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> screenList = <Widget>[
     HomeScreen(),
     Container(),
-    Container(),
+    NotificationScreen(),
     Container(),
   ];
 
