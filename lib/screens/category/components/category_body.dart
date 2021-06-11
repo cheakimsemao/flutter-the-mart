@@ -11,7 +11,7 @@ class CategoryBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(25),
-        vertical: getProportionateScreenWidth(20)
+        vertical: getProportionateScreenWidth(12)
       ),
       child: Column(
         children: <Widget> [
