@@ -495,7 +495,7 @@ List<Product> products = [
   Product(
     id: 48,
     productName: 'Lorem Ipsum',
-    productImage: 'assets/images/snacks/ferreo-rocher.jpg',
+    productImage: 'assets/images/snacks/ferrero-rocher.jpg',
     productCategory: 'snacks',
     productDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.',
     productPrice: 2.00,
