@@ -53,7 +53,7 @@ class ItemCard extends StatelessWidget {
           Text(
             text,
             style: TextStyle(
-              fontSize: getProportionateScreenWidth(15)
+              fontSize: getProportionateScreenWidth(14)
             ),
           )
         ],

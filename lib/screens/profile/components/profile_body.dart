@@ -11,7 +11,7 @@ class ProfileBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(20),
+          horizontal: getProportionateScreenWidth(25),
           vertical: getProportionateScreenWidth(25)
         ),
         child: Align(
