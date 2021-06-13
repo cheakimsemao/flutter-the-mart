@@ -15,42 +15,38 @@ class CategoryBody extends StatelessWidget {
       ),
       child: Column(
         children: <Widget> [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: getProportionateScreenWidth(5),
-                bottom: getProportionateScreenWidth(25)
+          Padding(
+            padding: EdgeInsets.only(
+              bottom: getProportionateScreenWidth(30)
+            ),
+            child: Text(
+              'Categories',
+              style: TextStyle(
+                fontSize: getProportionateScreenWidth(32),
+                fontWeight: FontWeight.bold,
+                color: primaryColor
               ),
-              child: Text(
-                'Categories',
-                style: TextStyle(
-                  fontSize: getProportionateScreenWidth(30),
-                  fontWeight: FontWeight.bold,
-                  color: primaryColor
-                ),
-              ),
-            )
+            ),
           ),
           ItemCard(
             icon: 'assets/icons/candy.svg',
-            category: 'Candies',
+            text: 'Candies',
           ),
           ItemCard(
             icon: 'assets/icons/drinks.svg',
-            category: 'Drinks',
+            text: 'Drinks',
           ),
           ItemCard(
             icon: 'assets/icons/fruits.svg',
-            category: 'Fruits',
+            text: 'Fruits',
           ),
           ItemCard(
             icon: 'assets/icons/noodle.svg',
-            category: 'Noodles',
+            text: 'Noodles',
           ),
           ItemCard(
             icon: 'assets/icons/snack.svg',
-            category: 'Snacks',
+            text: 'Snacks',
           ),
         ]
       ),
