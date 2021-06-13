@@ -7,11 +7,11 @@ class ItemCard extends StatelessWidget {
   const ItemCard({
     Key key,
     this.icon,
-    this.category,
+    this.text,
   }) : super(key: key);
 
   final String icon;
-  final String category;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +46,12 @@ class ItemCard extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               icon,
-              width: getProportionateScreenWidth(25),
-              height: getProportionateScreenWidth(25),
+              width: getProportionateScreenWidth(22),
+              height: getProportionateScreenWidth(22),
             ),
           ),
           Text(
-            category,
+            text,
             style: TextStyle(
               fontSize: getProportionateScreenWidth(15)
             ),
