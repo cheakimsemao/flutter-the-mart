@@ -12,7 +12,8 @@ class HomeSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: getProportionateScreenWidth(20)
+        horizontal: getProportionateScreenWidth(20),
+        vertical: getProportionateScreenWidth(20)
       ),
       child: Row(
         children: [

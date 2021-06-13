@@ -24,12 +24,15 @@ class _HomeCarouselState extends State<HomeCarousel> {
     return Column(
       children: [
         Container(
+          padding: EdgeInsets.symmetric(
+            vertical: getProportionateScreenWidth(7)
+          ),
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),
                 blurRadius: 15,
-                offset: Offset(0, 0),
+                offset: Offset(0, 7),
               ),
             ],
           ),
@@ -61,28 +64,23 @@ class _HomeCarouselState extends State<HomeCarousel> {
             )).toList(),
           ),
         ),
-        Padding(
-          padding: EdgeInsets.only(
-            top: getProportionateScreenWidth(7)
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: imageList.map((path) {
-              int index = imageList.indexOf(path);
-              return Container(
-                width: _current == index ? 20 : 8,
-                height: 8,
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 2,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(3),
-                  color: _current == index ? primaryColor : Color(0xFFD8D8D8),
-                ),
-              );
-            }).toList(),     
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: imageList.map((path) {
+            int index = imageList.indexOf(path);
+            return Container(
+              width: _current == index ? 20 : 8,
+              height: 8,
+              margin: EdgeInsets.symmetric(
+                vertical: 10,
+                horizontal: 2,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: _current == index ? primaryColor : Color(0xFFD8D8D8),
+              ),
+            );
+          }).toList(),     
         )
       ]
     );

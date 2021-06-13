@@ -13,31 +13,36 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: getProportionateScreenWidth(20)),
-            Text(
-              'The Mart',
-              style: TextStyle(
-                fontSize: getProportionateScreenWidth(36),
-                color: primaryColor,
-                fontWeight: FontWeight.bold,
+      child: Column(
+        children: [
+          SizedBox(height: getProportionateScreenWidth(20)),
+          Text(
+            'The Mart',
+            style: TextStyle(
+              fontSize: getProportionateScreenWidth(36),
+              color: primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          HomeSearch(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  
+                  HomeCarousel(),
+                  SizedBox(height: getProportionateScreenWidth(20)),
+                  HomeOfferTitle(title: 'Suggested For You'),
+                  SuggestedForYou(),
+                  SizedBox(height: getProportionateScreenWidth(10)),
+                  HomeOfferTitle(title: 'Best Sellings'),
+                  BestSellings(),
+                  SizedBox(height: getProportionateScreenWidth(20)),
+                ],
               ),
             ),
-            SizedBox(height: getProportionateScreenWidth(20)),
-            HomeSearch(),
-            SizedBox(height: getProportionateScreenWidth(25)),
-            HomeCarousel(),
-            SizedBox(height: getProportionateScreenWidth(20)),
-            HomeOfferTitle(title: 'Suggested For You'),
-            SuggestedForYou(),
-            SizedBox(height: getProportionateScreenWidth(10)),
-            HomeOfferTitle(title: 'Best Sellings'),
-            BestSellings(),
-            SizedBox(height: getProportionateScreenWidth(20)),
-          ],
-        ),
+          ),
+        ]
       ),
     );
   }

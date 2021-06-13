@@ -8,84 +8,88 @@ class NotificationBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(25),
-          vertical: getProportionateScreenWidth(12)
-        ),
-        margin: EdgeInsets.only(
-          top: getProportionateScreenWidth(60)
-        ),
-        child: Column(
-          children: <Widget> [
-            Align(
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: getProportionateScreenWidth(25),
+        vertical: getProportionateScreenWidth(12)
+      ),
+      margin: EdgeInsets.only(
+        top: getProportionateScreenWidth(20)
+      ),
+      child: Column(
+        children: [
+          SafeArea(
+            child: Container(
               alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: EdgeInsets.only(
-                  left: getProportionateScreenWidth(5),
-                  bottom: getProportionateScreenWidth(25)
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    bottom: getProportionateScreenWidth(12)
+              padding: EdgeInsets.only(
+                left: getProportionateScreenWidth(5),
+                bottom: getProportionateScreenWidth(25)
+              ),
+              margin: EdgeInsets.only(
+                bottom: getProportionateScreenWidth(10)
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget> [
+                  Text(
+                    'Notifications',
+                    style: TextStyle(
+                      fontSize: getProportionateScreenWidth(30),
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget> [
-                      Text(
-                        'Notifications',
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: getProportionateScreenWidth(3)
+                    ),
+                    child: InkWell(
+                      onTap: () {},
+                      child: Text(
+                        'Clear All',
                         style: TextStyle(
-                          fontSize: getProportionateScreenWidth(30),
-                          fontWeight: FontWeight.bold,
-                          color: primaryColor
+                          fontSize: getProportionateScreenWidth(14),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: getProportionateScreenWidth(3)
-                        ),
-                        child: InkWell(
-                          onTap: () {},
-                          child: Text(
-                            'Clear All',
-                            style: TextStyle(
-                              fontSize: getProportionateScreenWidth(14),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]
+                    ),
                   ),
-                ),
+                ]
               )
             ),
-            NotificationCard(
-              notification: 'Thanks for purchasing products from our mart.',
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget> [
+                  NotificationCard(
+                    notification: 'Thanks for purchasing products from our mart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Purchased successfully! Your products will be delivered to your location in 24 hours.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                  NotificationCard(
+                    notification: 'Your item has been added to the cart.',
+                  ),
+                ]
+              ),
             ),
-            NotificationCard(
-              notification: 'Purchased successfully! Your products will be delivered to your location in 24 hours.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-            NotificationCard(
-              notification: 'Your item has been added to the cart.',
-            ),
-          ]
-        ),
+          ),
+        ]
       ),
     );
   }
