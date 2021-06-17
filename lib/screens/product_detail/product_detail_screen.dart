@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/models/Product.dart';
+import 'package:the_mart/screens/cart/cart_screen.dart';
 import 'package:the_mart/screens/product_detail/components/product_detail_body.dart';
 import 'package:the_mart/size_config.dart';
 
@@ -34,7 +35,9 @@ class ProductDetailScreen extends StatelessWidget {
               icon: Icon(Icons.shopping_bag_outlined),
               iconSize: 35,
               color: Color(0xFF757575),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, CartScreen.routeName);
+              },
             ),
           )
         ],
