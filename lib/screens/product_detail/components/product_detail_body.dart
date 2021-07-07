@@ -5,14 +5,16 @@ import 'package:the_mart/constants.dart';
 import 'package:the_mart/models/Product.dart';
 import 'package:the_mart/size_config.dart';
 
-class ProductDetailBody extends StatelessWidget {
-  const ProductDetailBody({
-    Key key,
-    this.product
-  }) : super(key: key);
-
+class ProductDetailBody extends StatefulWidget {
   final Product product;
 
+  ProductDetailBody(this.product);
+
+  @override
+  _ProductDetailBodyState createState() => _ProductDetailBodyState();
+}
+
+class _ProductDetailBodyState extends State<ProductDetailBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +23,7 @@ class ProductDetailBody extends StatelessWidget {
           width: getProportionateScreenWidth(240),
           child: AspectRatio(
             aspectRatio: 1,
-            child: Image.asset(product.productImage),
+            child: Image.asset(widget.product.productImage),
           ),
         ),
         Container(
@@ -62,7 +64,7 @@ class ProductDetailBody extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      product.productName,
+                      widget.product.productName,
                       style: TextStyle(
                         fontSize: getProportionateScreenWidth(22),
                         fontWeight: FontWeight.bold,
@@ -70,7 +72,7 @@ class ProductDetailBody extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\$${product.productPrice.toStringAsFixed(2)}',
+                      '\$${widget.product.productPrice}',
                       style: TextStyle(
                         fontSize: getProportionateScreenWidth(22),
                         fontWeight: FontWeight.bold,
@@ -85,7 +87,7 @@ class ProductDetailBody extends StatelessWidget {
                   horizontal: getProportionateScreenWidth(35)
                 ),
                 child: Text(
-                  product.productDescription,
+                  widget.product.productDescription,
                   style: TextStyle(
                     fontSize: getProportionateScreenWidth(14)
                   ),
@@ -116,7 +118,7 @@ class ProductDetailBody extends StatelessWidget {
                           vertical: getProportionateScreenWidth(2)
                         ),
                         child: Text(
-                          product.productCategory,
+                          widget.product.productCategory,
                           style: TextStyle(
                             fontSize: getProportionateScreenWidth(12),
                           )

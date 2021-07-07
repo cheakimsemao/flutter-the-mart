@@ -31,6 +31,7 @@ dependencies:
   provider: ^5.0.0 # For state management
   animations: ^2.0.0
   carousel_slider: ^3.0.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:

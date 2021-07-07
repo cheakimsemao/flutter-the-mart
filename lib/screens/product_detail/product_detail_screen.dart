@@ -4,12 +4,20 @@ import 'package:the_mart/screens/cart/cart_screen.dart';
 import 'package:the_mart/screens/product_detail/components/product_detail_body.dart';
 import 'package:the_mart/size_config.dart';
 
-class ProductDetailScreen extends StatelessWidget {
+class ProductDetailScreen extends StatefulWidget {
   static String routeName = '/product_detail';
+  
+  final Product product;
+  ProductDetailScreen(this.product);
 
   @override
+  _ProductDetailScreenState createState() => _ProductDetailScreenState();
+}
+
+class _ProductDetailScreenState extends State<ProductDetailScreen> {
+  @override
   Widget build(BuildContext context) {
-    final ProductDetailArguments arguments = ModalRoute.of(context).settings.arguments;
+    // final ProductDetailArguments arguments = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
       appBar: AppBar(
@@ -43,13 +51,13 @@ class ProductDetailScreen extends StatelessWidget {
         ],
         toolbarHeight: 60,
       ),
-      body: ProductDetailBody(product: arguments.product),
+      body: ProductDetailBody(widget.product),
     );
   }
 }
 
-class ProductDetailArguments {
-  final Product product;
+// class ProductDetailArguments {
+//   final Product product;
 
-  ProductDetailArguments({ this.product });
-}
+//   ProductDetailArguments({ this.product });
+// }

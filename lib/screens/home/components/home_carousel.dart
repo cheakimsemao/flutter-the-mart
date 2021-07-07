@@ -4,7 +4,9 @@ import 'package:the_mart/constants.dart';
 import 'package:the_mart/size_config.dart';
 
 class HomeCarousel extends StatefulWidget {
-  HomeCarousel({Key key}) : super(key: key);
+  final List<String> imageList;
+
+  HomeCarousel(this.imageList);
 
   @override
   _HomeCarouselState createState() => _HomeCarouselState();
@@ -12,18 +14,12 @@ class HomeCarousel extends StatefulWidget {
 
 class _HomeCarouselState extends State<HomeCarousel> {
   int _current = 0;
-
-  final List<String> imageList = [
-    'assets/images/carousel-fruits.jpg',
-    'assets/images/carousel-snacks.jpg',
-    'assets/images/carousel-drinks.jpg',
-  ];
-
+  
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        widget.imageList.isEmpty ? SizedBox.shrink(): Container(
           padding: EdgeInsets.symmetric(
             vertical: getProportionateScreenWidth(7)
           ),
@@ -53,7 +49,7 @@ class _HomeCarouselState extends State<HomeCarousel> {
                 });
               }
             ),
-            items: imageList.map((item) => Container(
+            items: widget.imageList.map((item) => Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
@@ -66,8 +62,8 @@ class _HomeCarouselState extends State<HomeCarousel> {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: imageList.map((path) {
-            int index = imageList.indexOf(path);
+          children: widget.imageList.map((path) {
+            int index = widget.imageList.indexOf(path);
             return Container(
               width: _current == index ? 20 : 8,
               height: 8,
