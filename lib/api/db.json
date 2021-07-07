@@ -1,0 +1,664 @@
+{
+  "home": {
+    "carouselImages": [
+      "assets/images/carousel-fruits.jpg",
+      "assets/images/carousel-snacks.jpg",
+      "assets/images/carousel-drinks.jpg"
+    ],
+    "recommendationProducts": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/water-1.png",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "0.50"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-2.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-1.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-3.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/kitkat-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      }
+    ],
+    "bestSellingProducts": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-6.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-1.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-7.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-2.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/pringles-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      }
+    ]
+  },
+  "categories": {
+    "candies": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-1.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-2.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-3.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "0.50"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-4.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "0.50"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-5.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "0.75"
+      },
+      {
+        "id": 6,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/candies/candies-6.jpg",
+        "productCategory": "candies",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      }
+    ],
+    "drinks": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-1.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-2.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-3.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-4.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-5.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 6,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-6.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 7,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/drinks-7.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 8,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/beer-1.png",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 9,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/beer-2.png",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 10,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/beer-3.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 11,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/beer-4.png",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 12,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/milk-1.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 13,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/milk-2.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 14,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/milk-3.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 15,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/milk-4.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 16,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/milk-5.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 17,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/yogurt-1.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 18,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/yogurt-2.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 19,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/yogurt-3.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 20,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/water-1.png",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "0.50"
+      },
+      {
+        "id": 21,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/drinks/water-2.jpg",
+        "productCategory": "drinks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.50"
+      }
+    ],
+    "fruits": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-1.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-2.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-3.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-4.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-5.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      },
+      {
+        "id": 6,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/fruits/fruits-6.jpg",
+        "productCategory": "fruits",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.00"
+      }
+    ],
+    "noodles": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-1.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-2.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-3.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-4.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-5.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 6,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-6.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      },
+      {
+        "id": 7,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/noodles/noodles-7.jpg",
+        "productCategory": "noodles",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "1.25"
+      }
+    ],
+    "snacks": [
+      {
+        "id": 1,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 2,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-2.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 3,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-3.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 4,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-4.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 5,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-5.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 6,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/doritos-6.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 7,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/ferrero-rocher.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 8,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/kitkat-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 9,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/kitkat-2.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 10,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/kitkat-3.png",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 11,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 12,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-2.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 13,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-3.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 14,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-4.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 15,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-5.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 16,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/lays-6.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 17,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/oreo-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 18,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/oreo-2.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 19,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/pringles-1.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 20,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/pringles-2.jpg",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      },
+      {
+        "id": 21,
+        "productName": "Lorem Ipsum",
+        "productImage": "assets/images/snacks/pringles-3.png",
+        "productCategory": "snacks",
+        "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
+        "productPrice": "2.00"
+      }
+    ]
+  },
+  "cart": [
+    {
+      "id": 1,
+      "productName": "Lorem Ipsum",
+      "productImage": "assets/images/noodles/noodles-2.jpg",
+      "productPrice": "1.25",
+      "productAmount": 4
+    },
+    {
+      "id": 2,
+      "productName": "Lorem Ipsum",
+      "productImage": "assets/images/noodles/drinks-2.jpg",
+      "productPrice": "1.00",
+      "productAmount": 2
+    },
+    {
+      "id": 3,
+      "productName": "Lorem Ipsum",
+      "productImage": "assets/images/noodles/fruits-2.jpg",
+      "productPrice": "2.00",
+      "productAmount": 1
+    },
+    {
+      "id": 4,
+      "productName": "Lorem Ipsum",
+      "productImage": "assets/images/noodles/candies-1.jpg",
+      "productPrice": "1.00",
+      "productAmount": 2
+    },
+    {
+      "id": 5,
+      "productName": "Lorem Ipsum",
+      "productImage": "assets/images/noodles/lays-1.jpg",
+      "productPrice": "2.00",
+      "productAmount": 2
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "notificationDescription": "Thanks for purchasing products from our mart."
+    },
+    {
+      "id": 2,
+      "notificationDescription": "Purchased successfully! Your products will be delivered to your location in 24 hours."
+    },
+    {
+      "id": 3,
+      "notificationDescription": "Your item has been added to the cart."
+    },
+    {
+      "id": 4,
+      "notificationDescription": "Your item has been added to the cart."
+    },
+    {
+      "id": 5,
+      "notificationDescription": "Your item has been added to the cart."
+    },
+    {
+      "id": 6,
+      "notificationDescription": "Your item has been added to the cart."
+    },
+    {
+      "id": 7,
+      "notificationDescription": "Your item has been added to the cart."
+    },
+    {
+      "id": 8,
+      "notificationDescription": "Your item has been added to the cart."
+    }
+  ]
+}
