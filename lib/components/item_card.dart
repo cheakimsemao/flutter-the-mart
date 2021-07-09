@@ -8,55 +8,60 @@ class ItemCard extends StatelessWidget {
     Key key,
     this.icon,
     this.text,
+    this.press,
   }) : super(key: key);
 
   final String icon;
   final String text;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: getProportionateScreenWidth(68),
-      padding: EdgeInsets.symmetric(
-        horizontal: getProportionateScreenWidth(20)
-      ),
-      margin: EdgeInsets.only(
-        bottom: getProportionateScreenWidth(15)
-      ),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(
-          color: secondaryColor.withOpacity(0.25)
+    return GestureDetector(
+      onTap: press,
+      child: Container(
+        width: double.infinity,
+        height: getProportionateScreenWidth(68),
+        padding: EdgeInsets.symmetric(
+          horizontal: getProportionateScreenWidth(20)
         ),
-        borderRadius: BorderRadius.circular(15),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 15,
-            offset: Offset(0, 0),
-          )
-        ]
-      ),
-      child: Row(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(
-              right: getProportionateScreenWidth(15)
-            ),
-            child: SvgPicture.asset(
-              icon,
-              width: getProportionateScreenWidth(22),
-              height: getProportionateScreenWidth(22),
-            ),
+        margin: EdgeInsets.only(
+          bottom: getProportionateScreenWidth(15)
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(
+            color: secondaryColor.withOpacity(0.25)
           ),
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: getProportionateScreenWidth(14)
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 15,
+              offset: Offset(0, 0),
+            )
+          ]
+        ),
+        child: Row(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(
+                right: getProportionateScreenWidth(15)
+              ),
+              child: SvgPicture.asset(
+                icon,
+                width: getProportionateScreenWidth(22),
+                height: getProportionateScreenWidth(22),
+              ),
             ),
-          )
-        ],
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: getProportionateScreenWidth(14)
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

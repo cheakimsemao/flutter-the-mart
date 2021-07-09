@@ -91,6 +91,33 @@
     ]
   },
   "categories": {
+    "categoryList": [
+      {
+        "id": 1,
+        "categoryName": "Candies",
+        "categoryIcon": "assets/icons/candy.svg"
+      },
+      {
+        "id": 2,
+        "categoryName": "Drinks",
+        "categoryIcon": "assets/icons/drinks.svg"
+      },
+      {
+        "id": 3,
+        "categoryName": "Fruits",
+        "categoryIcon": "assets/icons/fruits.svg"
+      },
+      {
+        "id": 4,
+        "categoryName": "Noodles",
+        "categoryIcon": "assets/icons/noodle.svg"
+      },
+      {
+        "id": 5,
+        "categoryName": "Snacks",
+        "categoryIcon": "assets/icons/snack.svg"
+      }
+    ],
     "candies": [
       {
         "id": 1,
