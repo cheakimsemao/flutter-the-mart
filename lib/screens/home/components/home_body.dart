@@ -177,7 +177,7 @@ class _HomeBodyState extends State<HomeBody> {
       child: Stack(
         children: <Widget> [
           Container(
-            width: getProportionateScreenWidth(160),
+            width: getProportionateScreenWidth(158),
             margin: EdgeInsets.only(
               left: getProportionateScreenWidth(18.5),
             ),
