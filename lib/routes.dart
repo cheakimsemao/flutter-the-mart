@@ -6,6 +6,7 @@ import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/screens/main/main_screen.dart';
 import 'package:the_mart/screens/notification/notification_screen.dart';
 import 'package:the_mart/screens/product_detail/product_detail_screen.dart';
+import 'package:the_mart/screens/product_list/product_list_screen.dart';
 import 'package:the_mart/screens/profile/profile_screen.dart';
 import 'package:the_mart/screens/reset_password/reset_password_screen.dart';
 import 'package:the_mart/screens/onboarding/onboarding_screen.dart';
@@ -25,4 +26,5 @@ final Map<String, WidgetBuilder> routes = {
   ProfileScreen.routeName: (context) => ProfileScreen(),
   CategoryScreen.routeName: (context) => CategoryScreen(),
   // ProductDetailScreen.routeName: (context) => ProductDetailScreen(),
+  // ProductListScreen.routeName: (context) => ProductListScreen(),
 };
