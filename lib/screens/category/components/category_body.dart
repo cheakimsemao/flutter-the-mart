@@ -5,6 +5,8 @@ import 'package:the_mart/constants.dart';
 import 'package:the_mart/data_provider.dart';
 import 'package:the_mart/models/Category.dart';
 import 'package:the_mart/models/ProductList.dart';
+import 'package:the_mart/screens/product_list/components/product_list_body.dart';
+import 'package:the_mart/screens/product_list/product_list_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class CategoryBody extends StatefulWidget {
@@ -150,7 +152,12 @@ class _CategoryBodyState extends State<CategoryBody> {
 
   Widget categoryItemWidget(Category category) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        final route = MaterialPageRoute(
+          builder: (context) => ProductListScreen(category.categoryName)
+        );
+        Navigator.of(context).push(route);
+      },
       child: Container(
         width: double.infinity,
         height: getProportionateScreenWidth(68),
