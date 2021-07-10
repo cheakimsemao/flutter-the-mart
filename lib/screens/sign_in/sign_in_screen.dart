@@ -7,7 +7,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: backAppBar(),
+      // appBar: backAppBar(),
       body: SignInBody(),
     );
   }

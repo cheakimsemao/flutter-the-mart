@@ -15,6 +15,7 @@ class SignInBody extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: getProportionateScreenWidth(20),
+            vertical: getProportionateScreenWidth(55)
           ),
           child: SingleChildScrollView(
             child: Column(
