@@ -252,7 +252,7 @@
       {
         "id": 11,
         "productName": "Lorem Ipsum",
-        "productImage": "assets/images/drinks/beer-4.png",
+        "productImage": "assets/images/drinks/beer-4.jpg",
         "productCategory": "drinks",
         "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla nunc, suscipit non egestas et, tempor quis est. In hac habitasse platea dictumst. Donec luctus sapien ac ultrices sodales.",
         "productPrice": "1.00"
