@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:the_mart/components/default_button.dart';
+import 'package:the_mart/models/Onboarding.dart';
 import 'package:the_mart/screens/onboarding/components/onboarding_content.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/screens/sign_in/sign_in_screen.dart';
@@ -13,32 +17,36 @@ class OnboardingBody extends StatefulWidget {
 }
 
 class _OnboardingBodyState extends State<OnboardingBody> {
-  List<Map<String, String>> onboardingData = [
-    {
-      'text': 'Welcome to The Mart, let\'s shop!\n',
-      'image': 'assets/images/onboarding-1.png',
-    },
-    {
-      'text': 'You can find all items that you \nwant here',
-      'image': 'assets/images/onboarding-2.png',
-    },
-    {
-      'text': 'You can purchase your items \nwith only several clicks',
-      'image': 'assets/images/onboarding-3.png',
-    },
-    {
-      'text': 'We will deliver your items within \n24 hours',
-      'image': 'assets/images/onboarding-4.png',
-    }
-  ];
-
   int currentPage = 0;
   PageController _controller;
+  List<Onboarding> fetchOnboarding = [];
+  bool _isLoading = true;
+  bool _isError = false;
+
+  Future<Onboarding> fetchOnboardingData() async {
+    final url = Uri.parse('http://localhost:3000/onboarding');
+    final response = await get(url);
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+
+      setState(() {
+        for (Map i in data) {
+          fetchOnboarding.add(Onboarding.fromJson(i));
+        }
+        _isLoading = false;
+      });
+    } else {
+      _isError = true;
+      throw Exception('Failed to load data');
+    }
+  }
 
   @override
   void initState() {
     _controller = PageController(initialPage: 0);
     super.initState();
+    fetchOnboardingData();
   }
 
   @override
@@ -49,6 +57,37 @@ class _OnboardingBodyState extends State<OnboardingBody> {
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return Center(child: CircularProgressIndicator());
+    }
+    
+    if (_isError) {
+      return Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: getProportionateScreenWidth(30)
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error,
+              size: getProportionateScreenWidth(45),
+              color: errorColor
+            ),
+            SizedBox(height: getProportionateScreenWidth(10)),
+            Text(
+              'Error while loading data from the server. Please try again later.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: errorColor,
+                fontSize: getProportionateScreenWidth(14)
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.only(
@@ -68,10 +107,10 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                       currentPage = value;
                     });
                   },
-                  itemCount: onboardingData.length,
-                  itemBuilder: (context, index) => OnboardingContent(
-                    text: onboardingData[index]['text'],
-                    image: onboardingData[index]['image'],
+                  itemCount: fetchOnboarding.length,
+                  itemBuilder: (context, i) => OnboardingContent(
+                    text: fetchOnboarding[i].text,
+                    image: fetchOnboarding[i].image,
                   ),
                 )
               ),
@@ -86,15 +125,15 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: List.generate(
-                          onboardingData.length,
+                          fetchOnboarding.length,
                           (index) => buildDot(index: index)
                         )
                       ),
                       Spacer(flex: 3),
                       DefaultButton(
-                        text: currentPage == onboardingData.length - 1 ? 'Continue' : 'Next',
+                        text: currentPage == fetchOnboarding.length - 1 ? 'Continue' : 'Next',
                         press: () {
-                          if (currentPage == onboardingData.length - 1) {
+                          if (currentPage == fetchOnboarding.length - 1) {
                             Navigator.pushNamed(context, SignInScreen.routeName);
                           } else {
                           _controller.nextPage(

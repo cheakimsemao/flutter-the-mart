@@ -1,4 +1,26 @@
 {
+  "onboarding": [
+    {
+      "id": 1,
+      "text": "Welcome to The Mart, let's shop!\n",
+      "image": "assets/images/onboarding-1.png"
+    },
+    {
+      "id": 2,
+      "text": "You can find all items that you \nwant here",
+      "image": "assets/images/onboarding-2.png"
+    },
+    {
+      "id": 3,
+      "text": "You can purchase your items \nwith only several clicks",
+      "image": "assets/images/onboarding-3.png"
+    },
+    {
+      "id": 4,
+      "text": "We will deliver your items within \n24 hours",
+      "image": "assets/images/onboarding-4.png"
+    }
+  ],
   "home": {
     "carouselImages": [
       "assets/images/carousel-fruits.jpg",
