@@ -1,13 +1,81 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:the_mart/components/notification_card.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/models/Notifications.dart';
 import 'package:the_mart/size_config.dart';
 
-class NotificationBody extends StatelessWidget {
+class NotificationBody extends StatefulWidget {
   const NotificationBody({Key key}) : super(key: key);
 
   @override
+  _NotificationBodyState createState() => _NotificationBodyState();
+}
+
+class _NotificationBodyState extends State<NotificationBody> {
+  List<Notifications> fetchNotification = [];
+  bool _isLoading = true;
+  bool _isError = false;
+
+  Future<Notifications> fetchNotificationData() async {
+    final url = Uri.parse('http://localhost:3000/notifications');
+    final response = await get(url);
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+
+      setState(() {
+        for (Map i in data) {
+          fetchNotification.add(Notifications.fromJson(i));
+        }
+        _isLoading = false;
+      });
+    } else {
+      _isError = true;
+      throw Exception('Failed to load data');
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchNotificationData();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    if (_isLoading) {
+      return Center(child: CircularProgressIndicator());
+    }
+    
+    if (_isError) {
+      return Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: getProportionateScreenWidth(30)
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error,
+              size: getProportionateScreenWidth(45),
+              color: errorColor
+            ),
+            SizedBox(height: getProportionateScreenWidth(10)),
+            Text(
+              'Error while loading data from the server. Please try again later.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: errorColor,
+                fontSize: getProportionateScreenWidth(14)
+              ),
+            )
+          ],
+        ),
+      );
+    }
+
     return SafeArea(
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -59,37 +127,16 @@ class NotificationBody extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: <Widget> [
-                    NotificationCard(
-                      notification: 'Thanks for purchasing products from our mart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Purchased successfully! Your products will be delivered to your location in 24 hours.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                    NotificationCard(
-                      notification: 'Your item has been added to the cart.',
-                    ),
-                  ]
+                child: ListView.builder(
+                  itemCount: fetchNotification.length,
+                  itemBuilder: (context, i) {
+                    return NotificationCard(
+                      notificationDescription: fetchNotification[i].notificationDescription,
+                      notificationIcon: fetchNotification[i].notificationIcon,
+                    );
+                  }
                 ),
               ),
-            ),
           ]
         ),
       ),

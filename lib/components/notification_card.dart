@@ -3,14 +3,21 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/size_config.dart';
 
-class NotificationCard extends StatelessWidget {
+class NotificationCard extends StatefulWidget {
   const NotificationCard({
     Key key,
-    this.notification
+    this.notificationDescription,
+    this.notificationIcon
   }) : super(key: key);
 
-  final String notification;
+  final String notificationDescription;
+  final String notificationIcon;
 
+  @override
+  _NotificationCardState createState() => _NotificationCardState();
+}
+
+class _NotificationCardState extends State<NotificationCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,14 +53,14 @@ class NotificationCard extends StatelessWidget {
               right: getProportionateScreenWidth(15)
             ),
             child: SvgPicture.asset(
-              'assets/icons/notification.svg',
+              '${widget.notificationIcon}',
               width: getProportionateScreenWidth(20),
               height: getProportionateScreenWidth(20),
             ),
           ),
           Flexible(
             child: Text(
-              notification,
+              '${widget.notificationDescription}',
               style: TextStyle(
                 fontSize: getProportionateScreenWidth(12)
               ),

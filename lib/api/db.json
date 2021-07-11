@@ -657,35 +657,43 @@
   "notifications": [
     {
       "id": 1,
-      "notificationDescription": "Thanks for purchasing products from our mart."
+      "notificationDescription": "Thanks for purchasing products from our mart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 2,
-      "notificationDescription": "Purchased successfully! Your products will be delivered to your location in 24 hours."
+      "notificationDescription": "Purchased successfully! Your products will be delivered to your location in 24 hours.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 3,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 4,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 5,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 6,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 7,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     },
     {
       "id": 8,
-      "notificationDescription": "Your item has been added to the cart."
+      "notificationDescription": "Your item has been added to the cart.",
+      "notificationIcon": "assets/icons/notification.svg"
     }
   ]
 }
