@@ -40,8 +40,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               right: getProportionateScreenWidth(12)
             ),
             child: IconButton(
-              icon: Icon(Icons.shopping_bag_outlined),
-              iconSize: 35,
+              icon: Icon(Icons.share_rounded),
+              iconSize: 30,
               color: Color(0xFF757575),
               onPressed: () {
                 Navigator.pushNamed(context, CartScreen.routeName);

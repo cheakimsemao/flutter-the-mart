@@ -131,11 +131,57 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
               SizedBox(height: getProportionateScreenWidth(30)),
               CartCounter(),
               SizedBox(height: getProportionateScreenWidth(50)),
-              Align(
-                alignment: Alignment.center,
-                child: DefaultButton(
-                  text: 'Add to Cart',
-                  press: () {},
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(35)
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      width: getProportionateScreenWidth(75),
+                      height: getProportionateScreenWidth(56),
+                      padding: EdgeInsets.only(
+                        right: getProportionateScreenWidth(10)
+                      ),
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          side: BorderSide(
+                            width: 0.8,
+                            color: primaryLightColor,
+                          ),
+                          primary: secondaryColor,
+                        ),
+                        child: Icon(
+                          Icons.rate_review,
+                          color: primaryColor,
+                          size: getProportionateScreenWidth(25),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: getProportionateScreenWidth(228),
+                      height: getProportionateScreenHeight(56),
+                      // ignore: deprecated_member_use
+                      child: FlatButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        color: primaryColor,
+                        onPressed: () {},
+                        child: Text(
+                          'Add to Cart',
+                          style: TextStyle(
+                            fontSize: getProportionateScreenWidth(18),
+                            color: Colors.white,
+                          ),
+                        )
+                      ),
+                    )
+                  ]
                 ),
               )
             ],
