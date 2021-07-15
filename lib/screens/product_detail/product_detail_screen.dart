@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/models/Product.dart';
-import 'package:the_mart/screens/cart/cart_screen.dart';
 import 'package:the_mart/screens/product_detail/components/product_detail_body.dart';
 import 'package:the_mart/size_config.dart';
 
@@ -43,9 +42,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               icon: Icon(Icons.share_rounded),
               iconSize: 30,
               color: Color(0xFF757575),
-              onPressed: () {
-                Navigator.pushNamed(context, CartScreen.routeName);
-              },
+              onPressed: () {},
             ),
           )
         ],

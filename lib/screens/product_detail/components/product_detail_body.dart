@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:the_mart/components/cart_counter.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/models/Product.dart';
+import 'package:the_mart/screens/review/review_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class ProductDetailBody extends StatefulWidget {
@@ -81,7 +83,26 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
                   ]
                 ),
               ),
-              SizedBox(height: getProportionateScreenWidth(20)),
+              SizedBox(height: getProportionateScreenWidth(10)),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: getProportionateScreenWidth(30)
+                ),
+                child: RatingBarIndicator(
+                  rating: 4.5,
+                  direction: Axis.horizontal,
+                  itemCount: 5,
+                  itemSize: 22,
+                  itemPadding: EdgeInsets.symmetric(
+                    horizontal: getProportionateScreenWidth(1)
+                  ),
+                  itemBuilder: (context, _) => Icon(
+                    Icons.star,
+                    color: primaryLightColor,
+                  ),
+                ),
+              ),
+              SizedBox(height: getProportionateScreenWidth(15)),
               Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(35)
@@ -130,7 +151,7 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
               ),
               SizedBox(height: getProportionateScreenWidth(30)),
               CartCounter(),
-              SizedBox(height: getProportionateScreenWidth(50)),
+              SizedBox(height: getProportionateScreenWidth(30)),
               Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(35)
@@ -144,7 +165,11 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
                         right: getProportionateScreenWidth(10)
                       ),
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context, ReviewScreen.routeName
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)
