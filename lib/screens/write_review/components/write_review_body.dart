@@ -3,16 +3,33 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/data_provider.dart';
+import 'package:the_mart/models/Product.dart';
 import 'package:the_mart/size_config.dart';
 
 class WriteReviewBody extends StatefulWidget {
-  WriteReviewBody({Key key}) : super(key: key);
+  final Product product;
+
+  WriteReviewBody(this.product);
 
   @override
   _WriteReviewBodyState createState() => _WriteReviewBodyState();
 }
 
 class _WriteReviewBodyState extends State<WriteReviewBody> {
+  final _reviewController = TextEditingController();
+  double rating = 0;
+
+  void _onSubmitClick() async {
+    final newReview = await DataProvider.addReview(
+      widget.product.id,
+      rating,
+      _reviewController.text.trim(),
+      'Cheakimse Mao',
+      'assets/images/profile.png');
+    Navigator.pop(context, newReview);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -47,7 +64,6 @@ class _WriteReviewBodyState extends State<WriteReviewBody> {
               ),
               SizedBox(width: getProportionateScreenWidth(10)),
               RatingBar.builder(
-                initialRating: 0,
                 minRating: 1,
                 direction: Axis.horizontal,
                 allowHalfRating: true,
@@ -56,18 +72,19 @@ class _WriteReviewBodyState extends State<WriteReviewBody> {
                 itemPadding: EdgeInsets.symmetric(
                   horizontal: getProportionateScreenWidth(1)
                 ),
-                itemBuilder: (context, _) => Icon(
+                itemBuilder: (context, index) => Icon(
                   Icons.star,
-                  color: Colors.amber,
+                  color: primaryLightColor,
                 ),
-                onRatingUpdate: (rating) {
-                  print(rating);
+                onRatingUpdate: (value) {
+                  rating = value;
                 },
               ),
             ],
           ),
           SizedBox(height: getProportionateScreenWidth(30)),
           TextFormField(
+            controller: _reviewController,
             keyboardType: TextInputType.emailAddress,
             cursorColor: primaryColor,
             maxLines: 7,
@@ -78,7 +95,7 @@ class _WriteReviewBodyState extends State<WriteReviewBody> {
           ),
           SizedBox(height: getProportionateScreenWidth(30)),
           DefaultButton(
-            press: () {},
+            press: _onSubmitClick,
             text: 'Submit',
           ),
         ]

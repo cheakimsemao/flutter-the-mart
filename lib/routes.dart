@@ -29,6 +29,6 @@ final Map<String, WidgetBuilder> routes = {
   CategoryScreen.routeName: (context) => CategoryScreen(),
   // ProductDetailScreen.routeName: (context) => ProductDetailScreen(),
   // ProductListScreen.routeName: (context) => ProductListScreen(),
-  ReviewScreen.routeName: (context) => ReviewScreen(),
-  WriteReviewScreen.routeName: (context) => WriteReviewScreen(),
+  // ReviewScreen.routeName: (context) => ReviewScreen(),
+  // WriteReviewScreen.routeName: (context) => WriteReviewScreen(),
 };

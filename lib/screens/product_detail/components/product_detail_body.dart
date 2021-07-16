@@ -166,8 +166,9 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
                       ),
                       child: OutlinedButton(
                         onPressed: () {
-                          Navigator.pushNamed(
-                            context, ReviewScreen.routeName
+                           Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ReviewScreen(widget.product)),
                           );
                         },
                         style: OutlinedButton.styleFrom(

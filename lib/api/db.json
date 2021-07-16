@@ -29,7 +29,7 @@
     ],
     "recommendationProducts": [
       {
-        "id": 1,
+        "id": 26,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/water-1.png",
         "productCategory": "drinks",
@@ -37,7 +37,7 @@
         "productPrice": "0.50"
       },
       {
-        "id": 2,
+        "id": 29,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-2.jpg",
         "productCategory": "fruits",
@@ -45,7 +45,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 3,
+        "id": 34,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-1.jpg",
         "productCategory": "noodles",
@@ -53,7 +53,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 4,
+        "id": 36,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-3.jpg",
         "productCategory": "noodles",
@@ -61,7 +61,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 5,
+        "id": 48,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/kitkat-1.jpg",
         "productCategory": "snacks",
@@ -71,7 +71,7 @@
     ],
     "bestSellingProducts": [
       {
-        "id": 1,
+        "id": 6,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/candies/candies-6.jpg",
         "productCategory": "candies",
@@ -79,7 +79,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 2,
+        "id": 7,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-1.jpg",
         "productCategory": "drinks",
@@ -87,7 +87,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 3,
+        "id": 13,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-7.jpg",
         "productCategory": "drinks",
@@ -95,7 +95,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 4,
+        "id": 35,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-2.jpg",
         "productCategory": "noodles",
@@ -103,7 +103,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 5,
+        "id": 59,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/pringles-1.jpg",
         "productCategory": "snacks",
@@ -192,7 +192,7 @@
     ],
     "drinks": [
       {
-        "id": 1,
+        "id": 7,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-1.jpg",
         "productCategory": "drinks",
@@ -200,7 +200,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 2,
+        "id": 8,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-2.jpg",
         "productCategory": "drinks",
@@ -208,7 +208,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 3,
+        "id": 9,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-3.jpg",
         "productCategory": "drinks",
@@ -216,7 +216,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 4,
+        "id": 10,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-4.jpg",
         "productCategory": "drinks",
@@ -224,7 +224,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 5,
+        "id": 11,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-5.jpg",
         "productCategory": "drinks",
@@ -232,7 +232,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 6,
+        "id": 12,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-6.jpg",
         "productCategory": "drinks",
@@ -240,7 +240,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 7,
+        "id": 13,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/drinks-7.jpg",
         "productCategory": "drinks",
@@ -248,7 +248,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 8,
+        "id": 14,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/beer-1.png",
         "productCategory": "drinks",
@@ -256,7 +256,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 9,
+        "id": 15,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/beer-2.png",
         "productCategory": "drinks",
@@ -264,7 +264,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 10,
+        "id": 16,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/beer-3.jpg",
         "productCategory": "drinks",
@@ -272,7 +272,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 11,
+        "id": 17,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/beer-4.jpg",
         "productCategory": "drinks",
@@ -280,7 +280,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 12,
+        "id": 18,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/milk-1.jpg",
         "productCategory": "drinks",
@@ -288,7 +288,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 13,
+        "id": 19,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/milk-2.jpg",
         "productCategory": "drinks",
@@ -296,7 +296,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 14,
+        "id": 20,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/milk-3.jpg",
         "productCategory": "drinks",
@@ -304,7 +304,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 15,
+        "id": 21,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/milk-4.jpg",
         "productCategory": "drinks",
@@ -312,7 +312,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 16,
+        "id": 22,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/milk-5.jpg",
         "productCategory": "drinks",
@@ -320,7 +320,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 17,
+        "id": 23,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/yogurt-1.jpg",
         "productCategory": "drinks",
@@ -328,7 +328,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 18,
+        "id": 24,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/yogurt-2.jpg",
         "productCategory": "drinks",
@@ -336,7 +336,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 19,
+        "id": 25,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/yogurt-3.jpg",
         "productCategory": "drinks",
@@ -344,7 +344,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 20,
+        "id": 26,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/water-1.png",
         "productCategory": "drinks",
@@ -352,7 +352,7 @@
         "productPrice": "0.50"
       },
       {
-        "id": 21,
+        "id": 27,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/drinks/water-2.jpg",
         "productCategory": "drinks",
@@ -362,7 +362,7 @@
     ],
     "fruits": [
       {
-        "id": 1,
+        "id": 28,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-1.jpg",
         "productCategory": "fruits",
@@ -370,7 +370,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 2,
+        "id": 29,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-2.jpg",
         "productCategory": "fruits",
@@ -378,7 +378,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 3,
+        "id": 30,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-3.jpg",
         "productCategory": "fruits",
@@ -386,7 +386,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 4,
+        "id": 31,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-4.jpg",
         "productCategory": "fruits",
@@ -394,7 +394,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 5,
+        "id": 32,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-5.jpg",
         "productCategory": "fruits",
@@ -402,7 +402,7 @@
         "productPrice": "1.00"
       },
       {
-        "id": 6,
+        "id": 33,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/fruits/fruits-6.jpg",
         "productCategory": "fruits",
@@ -412,7 +412,7 @@
     ],
     "noodles": [
       {
-        "id": 1,
+        "id": 34,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-1.jpg",
         "productCategory": "noodles",
@@ -420,7 +420,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 2,
+        "id": 35,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-2.jpg",
         "productCategory": "noodles",
@@ -428,7 +428,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 3,
+        "id": 36,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-3.jpg",
         "productCategory": "noodles",
@@ -436,7 +436,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 4,
+        "id": 37,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-4.jpg",
         "productCategory": "noodles",
@@ -444,7 +444,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 5,
+        "id": 38,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-5.jpg",
         "productCategory": "noodles",
@@ -452,7 +452,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 6,
+        "id": 39,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-6.jpg",
         "productCategory": "noodles",
@@ -460,7 +460,7 @@
         "productPrice": "1.25"
       },
       {
-        "id": 7,
+        "id": 40,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/noodles/noodles-7.jpg",
         "productCategory": "noodles",
@@ -470,7 +470,7 @@
     ],
     "snacks": [
       {
-        "id": 1,
+        "id": 41,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-1.jpg",
         "productCategory": "snacks",
@@ -478,7 +478,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 2,
+        "id": 42,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-2.jpg",
         "productCategory": "snacks",
@@ -486,7 +486,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 3,
+        "id": 43,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-3.jpg",
         "productCategory": "snacks",
@@ -494,7 +494,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 4,
+        "id": 44,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-4.jpg",
         "productCategory": "snacks",
@@ -502,7 +502,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 5,
+        "id": 45,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-5.jpg",
         "productCategory": "snacks",
@@ -510,7 +510,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 6,
+        "id": 46,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/doritos-6.jpg",
         "productCategory": "snacks",
@@ -518,7 +518,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 7,
+        "id": 47,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/ferrero-rocher.jpg",
         "productCategory": "snacks",
@@ -526,7 +526,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 8,
+        "id": 48,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/kitkat-1.jpg",
         "productCategory": "snacks",
@@ -534,7 +534,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 9,
+        "id": 49,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/kitkat-2.jpg",
         "productCategory": "snacks",
@@ -542,7 +542,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 10,
+        "id": 50,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/kitkat-3.png",
         "productCategory": "snacks",
@@ -550,7 +550,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 11,
+        "id": 51,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-1.jpg",
         "productCategory": "snacks",
@@ -558,7 +558,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 12,
+        "id": 52,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-2.jpg",
         "productCategory": "snacks",
@@ -566,7 +566,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 13,
+        "id": 53,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-3.jpg",
         "productCategory": "snacks",
@@ -574,7 +574,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 14,
+        "id": 54,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-4.jpg",
         "productCategory": "snacks",
@@ -582,7 +582,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 15,
+        "id": 55,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-5.jpg",
         "productCategory": "snacks",
@@ -590,7 +590,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 16,
+        "id": 56,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/lays-6.jpg",
         "productCategory": "snacks",
@@ -598,7 +598,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 17,
+        "id": 57,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/oreo-1.jpg",
         "productCategory": "snacks",
@@ -606,7 +606,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 18,
+        "id": 58,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/oreo-2.jpg",
         "productCategory": "snacks",
@@ -614,7 +614,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 19,
+        "id": 59,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/pringles-1.jpg",
         "productCategory": "snacks",
@@ -622,7 +622,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 20,
+        "id": 60,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/pringles-2.jpg",
         "productCategory": "snacks",
@@ -630,7 +630,7 @@
         "productPrice": "2.00"
       },
       {
-        "id": 21,
+        "id": 61,
         "productName": "Lorem Ipsum",
         "productImage": "assets/images/snacks/pringles-3.png",
         "productCategory": "snacks",
@@ -716,6 +716,26 @@
       "id": 8,
       "notificationDescription": "Your item has been added to the cart.",
       "notificationIcon": "assets/icons/notification.svg"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 26,
+      "reviewer": "Cheakimse Mao",
+      "reviewerProfile": "assets/images/profile.png",
+      "rating": 4.5,
+      "comment": "Fresh!",
+      "datetime": 1626443689227
+    },
+    {
+      "id": 2,
+      "productId": 6,
+      "reviewer": "Cheakimse Mao",
+      "reviewerProfile": "assets/images/profile.png",
+      "rating": 4.5,
+      "comment": "Sweet!",
+      "datetime": 1626452308749
     }
   ]
 }
