@@ -5,6 +5,7 @@ import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/data_provider.dart';
 import 'package:the_mart/models/Product.dart';
+import 'package:the_mart/screens/review/review_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class WriteReviewBody extends StatefulWidget {
@@ -21,13 +22,13 @@ class _WriteReviewBodyState extends State<WriteReviewBody> {
   double rating = 0;
 
   void _onSubmitClick() async {
-    final newReview = await DataProvider.addReview(
+    await DataProvider.addReview(
       widget.product.id,
       rating,
       _reviewController.text.trim(),
       'Cheakimse Mao',
       'assets/images/profile.png');
-    Navigator.pop(context, newReview);
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ReviewScreen(widget.product)));
   }
 
   @override

@@ -34,7 +34,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
   void _onAddReviewClick() async {
     final route = MaterialPageRoute<Review>(
         builder: (context) => WriteReviewScreen(widget.product));
-    final result = await Navigator.push(context, route);
+    final result = await Navigator.pushReplacement(context, route);
     if (result != null) {
       setState(() {
         _reviews.add(result);
