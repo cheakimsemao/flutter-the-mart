@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/screens/complete_profile/complete_profile_screen.dart';
+import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -13,23 +15,46 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _repasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Container(
         margin: EdgeInsets.all(getProportionateScreenWidth(15)),
         child: Column(
           children: [
+            buildUsernameFormField(),
+            SizedBox(height: getProportionateScreenHeight(25)),
             buildEmailFormField(),
             SizedBox(height: getProportionateScreenHeight(25)),
             buildPasswordFormField(),
-            SizedBox(height: getProportionateScreenHeight(25)),
-            buildConfirmPasswordFormField(),
             SizedBox(height: getProportionateScreenHeight(30)),
             DefaultButton(
-              text: 'Continue',
-              press: () {
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              text: 'Sign Up',
+              press: () async {
+                if (_formKey.currentState.validate()) {
+                  try {
+                    FirebaseUser user = (await FirebaseAuth.instance
+                      .createUserWithEmailAndPassword(
+                        email: _emailController.text,
+                        password: _passwordController.text,)).user;
+                    if (user != null) {
+                      UserUpdateInfo updateUser = UserUpdateInfo();
+                      updateUser.displayName = _usernameController.text;
+                      user.updateProfile(updateUser);
+                      Navigator.of(context).pushNamed(HomeScreen.routeName);
+                    }
+                  } catch (e) {
+                    print(e);
+                    return null;
+                  }
+                }
               },
             )
           ],
@@ -40,6 +65,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: _passwordController,
       obscureText: true,
       cursorColor: primaryColor,
       decoration: InputDecoration(
@@ -58,16 +84,26 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
         ),
       ),
+      validator: (value) {
+        if (value.isEmpty) {
+          return 'Please enter your password';
+        }
+        if (value.length < 6) {
+          return 'Please enter more than 6 characters';
+        }
+        return null;
+      },
     );
   }
 
-  TextFormField buildConfirmPasswordFormField() {
+  TextFormField buildUsernameFormField() {
     return TextFormField(
-      obscureText: true,
+      controller: _usernameController,
+      keyboardType: TextInputType.name,
       cursorColor: primaryColor,
       decoration: InputDecoration(
-        labelText: 'Confirm Password',
-        hintText: 'Enter your confirm password',
+        labelText: 'Username',
+        hintText: 'Enter your username',
         suffixIcon: Padding(
           padding: EdgeInsets.fromLTRB(
             0,
@@ -76,16 +112,18 @@ class _SignUpFormState extends State<SignUpForm> {
             getProportionateScreenWidth(20),
           ),
           child: SvgPicture.asset(
-            'assets/icons/lock.svg',
+            'assets/icons/user.svg',
             height: getProportionateScreenWidth(22),
           ),
         ),
       ),
+      validator: (value) => value.isEmpty ? 'Please enter your username' : null,
     );
   }
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: _emailController,
       keyboardType: TextInputType.emailAddress,
       cursorColor: primaryColor,
       decoration: InputDecoration(
@@ -104,6 +142,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
         ),
       ),
+      validator: (value) => value.isEmpty ? 'Please enter your email' : null,
     );
   }
 }

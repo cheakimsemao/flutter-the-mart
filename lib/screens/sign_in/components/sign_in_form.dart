@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
@@ -14,11 +15,15 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   bool isRemember = false;
 
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Container(
         margin: EdgeInsets.all(getProportionateScreenWidth(15)),
         child: Column(
@@ -52,12 +57,26 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(height: getProportionateScreenHeight(20)),
             DefaultButton(
               text: 'Sign In',
-              press: () {
-                Navigator.pushNamed(
-                  context, MainScreen.routeName
-                );
-              },
-            )
+              press: () async {
+                if (_formKey.currentState.validate()) {
+                  try {
+                    FirebaseUser user =
+                      (await FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: _emailController.text,
+                        password: _passwordController.text,
+                      )).user;
+                    if (user != null) {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => MainScreen())
+                      );
+                    }
+                  } catch (e) {
+                    print(e);
+                    return null;
+                  }
+                }
+              }
+            ),
           ],
         ),
       )
@@ -66,6 +85,7 @@ class _SignInFormState extends State<SignInForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: _passwordController,
       obscureText: true,
       cursorColor: primaryColor,
       decoration: InputDecoration(
@@ -84,11 +104,13 @@ class _SignInFormState extends State<SignInForm> {
           ),
         ),
       ),
+      validator: (value) => value.isEmpty ? 'Please enter your password' : null,
     );
   }
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: _emailController,
       keyboardType: TextInputType.emailAddress,
       cursorColor: primaryColor,
       decoration: InputDecoration(
@@ -107,6 +129,7 @@ class _SignInFormState extends State<SignInForm> {
           ),
         ),
       ),
+      validator: (value) => value.isEmpty ? 'Please enter your email' : null,
     );
   }
 }

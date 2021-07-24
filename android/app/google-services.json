@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "29439305887",
+    "project_id": "flutter-the-mart",
+    "storage_bucket": "flutter-the-mart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29439305887:android:4cbf8601962c69b3335aaa",
+        "android_client_info": {
+          "package_name": "com.example.the_mart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29439305887-33bd4rhsu9umq14jpfuihi7v1p3j4r0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZToyVjWoxu5UeEvcgoOURwRZWrFwK270"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29439305887-33bd4rhsu9umq14jpfuihi7v1p3j4r0h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "29439305887-gmv33iaicn8g9jm4qrkllopnnjq7re9v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.theMart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

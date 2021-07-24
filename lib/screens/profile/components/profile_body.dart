@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:the_mart/components/item_card.dart';
 import 'package:the_mart/constants.dart';
+import 'package:the_mart/screens/sign_in/sign_in_screen.dart';
 import 'package:the_mart/size_config.dart';
 
 class ProfileBody extends StatelessWidget {
@@ -8,6 +10,8 @@ class ProfileBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final auth = FirebaseAuth.instance;
+    
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -69,22 +73,32 @@ class ProfileBody extends StatelessWidget {
               ItemCard(
                 icon: 'assets/icons/user.svg',
                 text: 'My Account',
+                press: () {},
               ),
               ItemCard(
                 icon: 'assets/icons/history.svg',
                 text: 'Purchase History',
+                press: () {},
               ),
               ItemCard(
                 icon: 'assets/icons/settings.svg',
                 text: 'Settings',
+                press: () {},
               ),
               ItemCard(
                 icon: 'assets/icons/question.svg',
                 text: 'Help Center',
+                press: () {},
               ),
               ItemCard(
                 icon: 'assets/icons/logout.svg',
                 text: 'Log Out',
+                press: () {
+                  auth.signOut();
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => SignInScreen())
+                  );
+                },
               )
             ],
           ),
