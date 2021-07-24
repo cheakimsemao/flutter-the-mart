@@ -127,16 +127,16 @@ class _NotificationBodyState extends State<NotificationBody> {
               ),
             ),
             Expanded(
-                child: ListView.builder(
-                  itemCount: fetchNotification.length,
-                  itemBuilder: (context, i) {
-                    return NotificationCard(
-                      notificationDescription: fetchNotification[i].notificationDescription,
-                      notificationIcon: fetchNotification[i].notificationIcon,
-                    );
-                  }
-                ),
+              child: ListView.builder(
+                itemCount: fetchNotification.length,
+                itemBuilder: (context, i) {
+                  return NotificationCard(
+                    notificationDescription: fetchNotification[i].notificationDescription,
+                    notificationIcon: fetchNotification[i].notificationIcon,
+                  );
+                }
               ),
+            ),
           ]
         ),
       ),
