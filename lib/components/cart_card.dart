@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_mart/constants.dart';
 import 'package:the_mart/size_config.dart';
 
-class CartCard extends StatelessWidget {
+class CartCard extends StatefulWidget {
   const CartCard({
     Key key,
     this.productImage,
@@ -14,8 +14,13 @@ class CartCard extends StatelessWidget {
   final String productImage;
   final String productName;
   final String productPrice;
-  final String productAmount;
+  final int productAmount;
 
+  @override
+  _CartCardState createState() => _CartCardState();
+}
+
+class _CartCardState extends State<CartCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +49,7 @@ class CartCard extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              productImage,
+              widget.productImage,
               width: getProportionateScreenWidth(110),
             ),
             SizedBox(width: getProportionateScreenWidth(10)),
@@ -53,7 +58,7 @@ class CartCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  productName,
+                  widget.productName,
                   style: TextStyle(
                     fontSize: getProportionateScreenWidth(14),
                   ),
@@ -62,7 +67,7 @@ class CartCard extends StatelessWidget {
                 SizedBox(height: getProportionateScreenWidth(5)),
                 Text.rich(
                   TextSpan(
-                    text: productPrice,
+                    text: '\$${widget.productPrice}',
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(12),
                       fontWeight: FontWeight.bold,
@@ -70,7 +75,7 @@ class CartCard extends StatelessWidget {
                     ),
                     children: [
                       TextSpan(
-                        text: productAmount,
+                        text: ' x${widget.productAmount}',
                         style: Theme.of(context).textTheme.bodyText1
                       ),
                     ],

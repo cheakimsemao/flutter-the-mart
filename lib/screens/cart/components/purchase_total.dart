@@ -54,7 +54,7 @@ class PurchaseTotal extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '\$100.00',
+                  '\$15.00',
                   style: TextStyle(
                     fontSize: getProportionateScreenWidth(20),
                     fontWeight: FontWeight.bold

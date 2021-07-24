@@ -650,28 +650,28 @@
     {
       "id": 2,
       "productName": "Lorem Ipsum",
-      "productImage": "assets/images/noodles/drinks-2.jpg",
+      "productImage": "assets/images/drinks/drinks-2.jpg",
       "productPrice": "1.00",
       "productAmount": 2
     },
     {
       "id": 3,
       "productName": "Lorem Ipsum",
-      "productImage": "assets/images/noodles/fruits-2.jpg",
+      "productImage": "assets/images/fruits/fruits-2.jpg",
       "productPrice": "2.00",
       "productAmount": 1
     },
     {
       "id": 4,
       "productName": "Lorem Ipsum",
-      "productImage": "assets/images/noodles/candies-1.jpg",
+      "productImage": "assets/images/candies/candies-1.jpg",
       "productPrice": "1.00",
       "productAmount": 2
     },
     {
       "id": 5,
       "productName": "Lorem Ipsum",
-      "productImage": "assets/images/noodles/lays-1.jpg",
+      "productImage": "assets/images/snacks/lays-1.jpg",
       "productPrice": "2.00",
       "productAmount": 2
     }
