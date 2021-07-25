@@ -25,7 +25,7 @@ class _ProductDetailBodyState extends State<ProductDetailBody> {
           width: getProportionateScreenWidth(240),
           child: AspectRatio(
             aspectRatio: 1,
-            child: Image.asset(widget.product.productImage),
+            child: Image.network(widget.product.productImage),
           ),
         ),
         Container(

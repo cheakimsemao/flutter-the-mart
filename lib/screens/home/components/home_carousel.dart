@@ -53,7 +53,7 @@ class _HomeCarouselState extends State<HomeCarousel> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: AssetImage(item),
+                  image: NetworkImage(item),
                   fit: BoxFit.cover,
                 )
               ),

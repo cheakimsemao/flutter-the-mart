@@ -48,7 +48,7 @@ class _CartCardState extends State<CartCard> {
         padding: EdgeInsets.all(getProportionateScreenWidth(10)),
         child: Row(
           children: [
-            Image.asset(
+            Image.network(
               widget.productImage,
               width: getProportionateScreenWidth(110),
             ),

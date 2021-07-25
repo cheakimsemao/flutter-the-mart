@@ -208,7 +208,7 @@ class _HomeBodyState extends State<HomeBody> {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       alignment: Alignment.topCenter,
-                      image: AssetImage(product.productImage)
+                      image: NetworkImage(product.productImage)
                     )
                   ),
                 ),

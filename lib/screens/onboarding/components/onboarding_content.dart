@@ -32,7 +32,7 @@ class OnboardingContent extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         Spacer(),
-        Image.asset(
+        Image.network(
           image,
           height: getProportionateScreenHeight(285),
           width: getProportionateScreenWidth(255),

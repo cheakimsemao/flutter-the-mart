@@ -209,7 +209,7 @@ class _ProductListBodyState extends State<ProductListBody> {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       alignment: Alignment.topCenter,
-                      image: AssetImage(product.productImage)
+                      image: NetworkImage(product.productImage)
                     )
                   ),
                 ),

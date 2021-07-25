@@ -7,11 +7,9 @@ class NotificationCard extends StatefulWidget {
   const NotificationCard({
     Key key,
     this.notificationDescription,
-    this.notificationIcon
   }) : super(key: key);
 
   final String notificationDescription;
-  final String notificationIcon;
 
   @override
   _NotificationCardState createState() => _NotificationCardState();
@@ -53,7 +51,7 @@ class _NotificationCardState extends State<NotificationCard> {
               right: getProportionateScreenWidth(15)
             ),
             child: SvgPicture.asset(
-              '${widget.notificationIcon}',
+              'assets/icons/notification.svg',
               width: getProportionateScreenWidth(20),
               height: getProportionateScreenWidth(20),
             ),

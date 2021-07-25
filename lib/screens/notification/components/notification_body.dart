@@ -132,7 +132,6 @@ class _NotificationBodyState extends State<NotificationBody> {
                 itemBuilder: (context, i) {
                   return NotificationCard(
                     notificationDescription: fetchNotification[i].notificationDescription,
-                    notificationIcon: fetchNotification[i].notificationIcon,
                   );
                 }
               ),
