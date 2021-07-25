@@ -20,7 +20,7 @@ class _CartBodyState extends State<CartBody> {
   bool _isError = false;
 
   Future<Cart> fetchCartData() async {
-    final url = Uri.parse('http://localhost:3000/cart');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/cart');
     final response = await get(url);
 
     if (response.statusCode == 200) {
@@ -110,49 +110,6 @@ class _CartBodyState extends State<CartBody> {
               }
             ),
           ),
-          // Expanded(
-          //   child: SingleChildScrollView(
-          //     child: Padding(
-          //       padding: EdgeInsets.only(
-          //         bottom: getProportionateScreenWidth(15)
-          //       ),
-          //       child: Column(
-          //         children: <Widget>[
-          //           CartCard(
-          //             productImage: 'assets/images/noodles/noodles-2.jpg',
-          //             productName: 'Lorem Ipsum',
-          //             productPrice: '\$2.00',
-          //             productAmount: ' x4',
-          //           ),
-          //           CartCard(
-          //             productImage: 'assets/images/drinks/drinks-2.jpg',
-          //             productName: 'Lorem Ipsum',
-          //             productPrice: '\$2.00',
-          //             productAmount: ' x2',
-          //           ),
-          //           CartCard(
-          //             productImage: 'assets/images/fruits/fruits-2.jpg',
-          //             productName: 'Lorem Ipsum',
-          //             productPrice: '\$2.00',
-          //             productAmount: ' x1',
-          //           ),
-          //           CartCard(
-          //             productImage: 'assets/images/candies/candies-1.jpg',
-          //             productName: 'Lorem Ipsum',
-          //             productPrice: '\$2.00',
-          //             productAmount: ' x2',
-          //           ),
-          //           CartCard(
-          //             productImage: 'assets/images/snacks/lays-1.jpg',
-          //             productName: 'Lorem Ipsum',
-          //             productPrice: '\$2.00',
-          //             productAmount: ' x2',
-          //           ),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
           PurchaseTotal(),
         ],
       ),

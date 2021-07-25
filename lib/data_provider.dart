@@ -6,7 +6,7 @@ import 'package:the_mart/models/Review.dart';
 
 class DataProvider {
   static Future<Home> fetchHomeData() async {
-    final url = Uri.parse('http://localhost:3000/home');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/home');
     final response = await get(url);
 
     if (response.statusCode == 200) {
@@ -18,7 +18,7 @@ class DataProvider {
   }
 
   static Future<ProductList> fetchProductListData() async {
-    final url = Uri.parse('http://localhost:3000/categories');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/categories');
     final response = await get(url);
 
     if (response.statusCode == 200) {
@@ -30,7 +30,7 @@ class DataProvider {
   }
 
   static Future<List<Review>> fetchReviewsData(int productId) async {
-    final url = Uri.parse('http://localhost:3000/reviews?productId=$productId');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/reviews?productId=$productId');
     final response = await get(url);
 
     if (response.statusCode == 200) {
@@ -45,7 +45,7 @@ class DataProvider {
   }
 
   static Future<Review> addReview(int productId, double rating, String comment, String reviewer, String reviewerProfile) async {
-    final url = Uri.parse('http://localhost:3000/reviews');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/reviews');
     Map<String, String> headers = {'Content-Type': 'application/json'};
     final newReview = Review(0, productId, reviewer, reviewerProfile, rating, comment, DateTime.now().millisecondsSinceEpoch);
     final response = await post(url, headers: headers, body: newReview.toJson());

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:the_mart/components/default_button.dart';
@@ -24,7 +23,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
   bool _isError = false;
 
   Future<Onboarding> fetchOnboardingData() async {
-    final url = Uri.parse('http://localhost:3000/onboarding');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/onboarding');
     final response = await get(url);
 
     if (response.statusCode == 200) {

@@ -19,7 +19,7 @@ class _NotificationBodyState extends State<NotificationBody> {
   bool _isError = false;
 
   Future<Notifications> fetchNotificationData() async {
-    final url = Uri.parse('http://localhost:3000/notifications');
+    final url = Uri.parse('https://cheakimse-the-mart-api.herokuapp.com/notifications');
     final response = await get(url);
 
     if (response.statusCode == 200) {
