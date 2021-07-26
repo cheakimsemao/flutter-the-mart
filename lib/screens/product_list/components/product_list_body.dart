@@ -78,6 +78,7 @@ class _ProductListBodyState extends State<ProductListBody> {
         Expanded(
           child: productListWidget(category: widget.categoryName.toString())
         ),
+        SizedBox(height: getProportionateScreenWidth(10))
       ],
     );
   }
