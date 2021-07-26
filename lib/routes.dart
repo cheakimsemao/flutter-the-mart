@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_mart/screens/cart/cart_screen.dart';
 import 'package:the_mart/screens/category/category_screen.dart';
-import 'package:the_mart/screens/complete_profile/complete_profile_screen.dart';
 import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/screens/main/main_screen.dart';
 import 'package:the_mart/screens/notification/notification_screen.dart';
@@ -19,7 +18,6 @@ final Map<String, WidgetBuilder> routes = {
   OnboardingScreen.routeName: (context) => OnboardingScreen(),
   SignInScreen.routeName: (context) => SignInScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),
-  CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   MainScreen.routeName: (context) => MainScreen(),

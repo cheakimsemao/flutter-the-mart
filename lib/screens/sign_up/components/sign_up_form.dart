@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:the_mart/components/default_button.dart';
 import 'package:the_mart/constants.dart';
-import 'package:the_mart/screens/complete_profile/complete_profile_screen.dart';
 import 'package:the_mart/screens/home/home_screen.dart';
 import 'package:the_mart/size_config.dart';
 
